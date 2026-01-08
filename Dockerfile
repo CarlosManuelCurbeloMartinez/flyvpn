@@ -9,4 +9,4 @@ COPY stunnel.pem /etc/stunnel/stunnel.pem
 
 RUN chmod 600 /etc/stunnel/stunnel.pem
 
-CMD service ssh start && stunnel /etc/stunnel/stunnel.conf && tail -f /dev/null
+CMD service ssh start && sleep 2 && stunnel -f /etc/stunnel/stunnel.conf && tail -f /dev/null 
